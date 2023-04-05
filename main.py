@@ -54,3 +54,14 @@ for i in persons:
 
 for i in worker_objects:
     i.get_info()
+
+###########################################
+class CustomLabel():
+    def __init__(self, text, **kwargs):
+        self.text = text
+        for key, value in kwargs.items():
+            setattr(self, key, value)
+
+    def config(self, **kwargs):
+        for key, value in kwargs.items():
+            setattr(self, key, value)
