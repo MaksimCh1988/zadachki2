@@ -152,3 +152,20 @@ assert len(manager.task_list.tasks) == 1
 
 print('-----Список дел-----')
 manager.show_tasks()
+
+###########################################
+class UserMail():
+    def __init__(self, login, email):
+        self.login = login
+        self.__email = email
+
+    def get_email(self):
+        return (self.__email)
+
+    def set_email(self, email):
+        if '@' in email and list(email).count('@') == 1 and email.find('@') < email.find('.'):
+            self.__email = email
+        else:
+            print(f'ErrorMail:{email}')
+
+    email = property(fget=get_email, fset=set_email)
