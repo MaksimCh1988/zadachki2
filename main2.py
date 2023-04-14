@@ -72,3 +72,4 @@ class Cart():
         for i in sorted(p_result):
             print(i)
         print(f'---Total: {self.total}---')
+
